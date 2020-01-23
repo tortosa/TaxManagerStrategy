@@ -9,7 +9,11 @@ namespace TaxManager
             double hourlyRate = 12.1321;
             double hoursWorked = 42;
 
-            GermanyTaxManager gtm = new GermanyTaxManager(hourlyRate, hoursWorked);
+            TaxManager gtm = new GermanyTaxManager(hourlyRate, hoursWorked);
+            Console.WriteLine(gtm.GetInfo());
+            gtm = new ItalyTaxManager(hourlyRate, hoursWorked);
+            Console.WriteLine(gtm.GetInfo());
+            gtm = new IrelandTaxManager(hourlyRate, hoursWorked);
             Console.WriteLine(gtm.GetInfo());
         }
     }
